@@ -1,24 +1,23 @@
+import 'package:cocktail/homepage.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  MyApp({Key? key}) : super(key: key);
+  var myText = "Nepal";
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       color: Colors.deepPurple,
-      theme: ThemeData(primarySwatch: Colors.pink),
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Center(
-            child: Text('Cocktail App'),
-          ),
-        ),
+      theme: ThemeData(
+        primarySwatch: Colors.pink,
       ),
+      home: const HomePage(),
     );
   }
 }
